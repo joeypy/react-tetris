@@ -24,4 +24,5 @@ const StyledStartButton = styled.div`
   font-size: 1rem;
   outline: none;
   cursor: pointer;
+  user-select: none;
 `;

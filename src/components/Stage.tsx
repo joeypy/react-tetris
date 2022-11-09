@@ -1,5 +1,5 @@
 import styled from 'styled-components';
-import { Cell } from './Cell';
+import Cell from './Cell';
 
 interface Props {
   stage: any[];
@@ -13,7 +13,9 @@ interface IStyledStage {
 export const Stage = ({ stage }: Props) => {
   return (
     <StyledStage width={stage[0].length} height={stage.length}>
-      {stage.map((row: any[]) => row.map((cell: number[], x: number) => <Cell key={x} type={cell[0]} />))}
+      {stage.map((row: any[]) =>
+        row.map((cell: number[], x: number) => <Cell key={x} type={cell[0]} />)
+      )}
     </StyledStage>
   );
 };

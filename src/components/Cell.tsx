@@ -1,3 +1,4 @@
+import React from 'react';
 import styled from 'styled-components';
 import { TETROMINOS } from '../tetrominos';
 
@@ -10,7 +11,7 @@ interface IStyled {
   type: string | number;
 }
 
-export const Cell = ({ type }: Props) => {
+const Cell = ({ type }: Props) => {
   return <StyledCell type={type} color={TETROMINOS[type].color} />;
 };
 
@@ -23,3 +24,5 @@ const StyledCell = styled.div<IStyled>`
   border-top-color: rgba(${(props) => props.color}, 1);
   border-left-color: rgba(${(props) => props.color}, 0.3);
 `;
+
+export default React.memo(Cell);
