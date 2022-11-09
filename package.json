@@ -1,12 +1,14 @@
 {
   "name": "react-tetris",
+  "homepage": "https://joeypy.github.io/react-tetris",
   "private": true,
   "version": "0.0.0",
   "type": "module",
   "scripts": {
     "dev": "vite",
     "build": "tsc && vite build",
-    "preview": "vite preview"
+    "preview": "vite preview",
+    "deploy": "gh-pages -d dist"
   },
   "dependencies": {
     "react": "^18.2.0",
@@ -18,6 +20,7 @@
     "@types/react-dom": "^18.0.7",
     "@types/styled-components": "^5.1.26",
     "@vitejs/plugin-react": "^2.2.0",
+    "gh-pages": "^4.0.0",
     "typescript": "^4.6.4",
     "vite": "^3.2.0"
   }
